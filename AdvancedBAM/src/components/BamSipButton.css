@@ -1,0 +1,52 @@
+.bamSipButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+  flex-shrink: 0;
+}
+
+.bamSipButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32rem;
+  height: 32rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(20, 32, 45, 0.92);
+  border: 1.5rem solid rgba(56, 189, 248, 0.65);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.45), 0 0 8rem rgba(56, 189, 248, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.bamSipButton:hover {
+  background: rgba(14, 165, 233, 0.35);
+  border-color: #38bdf8;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.6), 0 0 12rem rgba(56, 189, 248, 0.55);
+  transform: translateY(-1rem);
+}
+
+.bamSipButton:active {
+  transform: scale(0.95);
+  background: rgba(2, 132, 199, 0.5);
+}
+
+.bamSipIconBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.bamSipText {
+  font-family: inherit;
+  font-size: 10rem;
+  font-weight: 900;
+  color: #38bdf8;
+  letter-spacing: 0.8rem;
+  text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+}

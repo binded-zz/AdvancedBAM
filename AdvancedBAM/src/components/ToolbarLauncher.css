@@ -1,0 +1,37 @@
+.bam-toolbar-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bam-toolbar-btn {
+  width: 40rem;
+  height: 40rem;
+  margin-bottom: 2rem;
+  background: #141e28;
+  border: 1rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 4rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, border-color 0.1s;
+  padding: 0;
+}
+
+.bam-toolbar-btn:hover {
+  background: rgba(30, 50, 75, 0.95);
+  border-color: rgba(90, 180, 255, 0.6);
+}
+
+.bam-toolbar-btn.active {
+  background: rgba(18, 52, 86, 1);
+  border-color: #4fc3f7;
+  box-shadow: 0 0 4rem rgba(79, 195, 247, 0.4);
+}
+
+.bam-toolbar-icon {
+  width: 24rem;
+  height: 24rem;
+  fill: #4fc3f7;
+}

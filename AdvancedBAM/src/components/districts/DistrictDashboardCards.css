@@ -1,0 +1,760 @@
+/* District Dashboard Cards Styling - Flexbox Only, No Grid, No Gap */
+
+.bam-dash-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 12rem;
+}
+
+.bam-dash-cards-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  padding: 0 2rem;
+}
+
+.bam-dash-toolbar-hint {
+  font-size: 9rem;
+  color: #78909c;
+  font-style: italic;
+  margin-right: 8rem;
+  margin-bottom: 2rem;
+}
+
+.bam-dash-cards-toolbar-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bam-dash-reset-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1rem solid rgba(255, 255, 255, 0.12);
+  color: #90a4ae;
+  font-size: 8.5rem;
+  padding: 2rem 6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-right: 6rem;
+  transition: all 0.12s ease;
+}
+
+.bam-dash-reset-btn:last-child {
+  margin-right: 0;
+}
+
+.bam-dash-reset-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eceff1;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.bam-dash-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.bam-dash-card {
+  display: flex;
+  flex-direction: column;
+  width: 32.33%;
+  margin-right: 1%;
+  margin-bottom: 8rem;
+  background: rgba(18, 26, 38, 0.75);
+  border: 1rem solid rgba(255, 255, 255, 0.08);
+  border-radius: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.bam-dash-card.dragging {
+  opacity: 0.45;
+  border-color: #29b6f6;
+  transform: scale(0.98);
+}
+
+.bam-dash-card.drag-over {
+  border-color: #00e5ff;
+  border-style: solid;
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 8rem rgba(0, 229, 255, 0.2);
+}
+
+.bam-dash-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5rem 8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1rem solid rgba(255, 255, 255, 0.06);
+  cursor: grab;
+  user-select: none;
+}
+
+.bam-dash-card.collapsed .bam-dash-card-header {
+  border-bottom: none;
+}
+
+.bam-dash-card-header:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.bam-dash-card-header:active {
+  cursor: grabbing;
+}
+
+.bam-dash-card-title-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  margin-right: 6rem;
+  margin-bottom: 1rem;
+  min-width: 0;
+}
+
+.bam-dash-card-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  margin-right: 5rem;
+  flex-shrink: 0;
+}
+
+.bam-card-collapse-btn {
+  background: transparent;
+  border: none;
+  color: #4fc3f7;
+  padding: 1rem 3rem 1rem 0;
+  margin-right: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.bam-card-collapse-btn:hover {
+  color: #ffffff;
+}
+
+.bam-card-drag-handle {
+  color: #546e7a;
+  font-size: 11rem;
+  margin-right: 4rem;
+  cursor: grab;
+  letter-spacing: -1rem;
+  line-height: 1;
+}
+
+.bam-dash-card-title {
+  font-size: 10rem;
+  font-weight: 800;
+  color: #eceff1;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bam-dash-card-header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.bam-dash-card-badge {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #81d4fa;
+  background: rgba(2, 136, 209, 0.2);
+  border: 1rem solid rgba(2, 136, 209, 0.4);
+  padding: 1rem 5rem;
+  border-radius: 3rem;
+  margin-right: 5rem;
+  white-space: nowrap;
+}
+
+.bam-card-reorder-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bam-card-reorder-btn {
+  background: transparent;
+  border: none;
+  color: #546e7a;
+  font-size: 9rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.1s ease;
+}
+
+.bam-card-reorder-btn:hover {
+  color: #81d4fa;
+}
+
+.bam-card-reorder-btn.disabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+  color: #90a4ae;
+}
+
+.bam-dash-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 8rem;
+}
+
+.bam-dash-scroll-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bam-dash-subhead {
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: #90a4ae;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.bam-dash-divider {
+  height: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* Stat Row */
+.bam-stat-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  font-size: 10rem;
+}
+
+.bam-stat-row-label {
+  color: #90a4ae;
+  margin-right: 6rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bam-stat-row-value {
+  font-weight: 700;
+  color: #eceff1;
+  text-align: right;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mini Bar Distribution Component */
+.bam-minibar-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.bam-minibar-track {
+  display: flex;
+  flex-direction: row;
+  height: 6rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.bam-minibar-seg {
+  height: 100%;
+  transition: width 0.15s ease;
+}
+
+.bam-minibar-legend {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.bam-minibar-legend-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.bam-minibar-legend-row:last-child {
+  margin-bottom: 0;
+}
+
+.bam-minibar-legend-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 0;
+  margin-right: 6rem;
+  line-height: 12rem;
+}
+
+.bam-minibar-legend-item:last-child {
+  margin-right: 0;
+}
+
+.bam-minibar-dot {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 2rem;
+  margin-right: 3rem;
+  flex-shrink: 0;
+}
+
+.bam-minibar-legend-text {
+  font-size: 8.5rem;
+  line-height: 12rem;
+  color: #b0bec5;
+  white-space: nowrap;
+  margin-right: 2rem;
+}
+
+.bam-minibar-legend-val {
+  font-size: 8.5rem;
+  line-height: 12rem;
+  font-weight: 700;
+  color: #eceff1;
+  white-space: nowrap;
+}
+
+.bam-minibar-empty {
+  font-size: 9rem;
+  color: #78909c;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+/* Schools Mini-Table */
+.bam-schools-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bam-schools-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem 0;
+  font-size: 10rem;
+  border-bottom: 1rem solid rgba(255, 255, 255, 0.03);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.bam-schools-head {
+  font-weight: 700;
+  color: #78909c;
+  border-bottom: 1rem solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 4rem;
+  text-transform: uppercase;
+  font-size: 9rem;
+}
+
+.bam-sch-col {
+  box-sizing: border-box;
+}
+
+.bam-sch-col.level {
+  width: 28%;
+  font-weight: 700;
+  color: #cfd8dc;
+  text-align: left;
+}
+
+.bam-sch-col.enr {
+  width: 18%;
+  text-align: right;
+  color: #eceff1;
+}
+
+.bam-sch-col.cap {
+  width: 18%;
+  text-align: right;
+  color: #90a4ae;
+}
+
+.bam-sch-col.elig {
+  width: 18%;
+  text-align: right;
+  color: #ce93d8;
+}
+
+.bam-sch-col.avail {
+  width: 18%;
+  text-align: right;
+}
+
+/* Happiness Driver Chips */
+.bam-happiness-chips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.bam-happy-chip {
+  font-size: 8.5rem;
+  font-weight: 700;
+  padding: 2rem 5rem;
+  border-radius: 3rem;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+}
+
+.bam-happy-chip.pos {
+  background: rgba(102, 187, 106, 0.15);
+  border: 1rem solid rgba(102, 187, 106, 0.4);
+  color: #81c784;
+}
+
+.bam-happy-chip.neg {
+  background: rgba(239, 83, 80, 0.15);
+  border: 1rem solid rgba(239, 83, 80, 0.4);
+  color: #e57373;
+}
+
+/* ===== Policy Cards (gamePolicies & policyPlus) ===== */
+.bam-dash-policy-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  padding: 0 2rem;
+}
+
+.bam-dash-policy-count {
+  font-size: 9.5rem;
+  color: #90a4ae;
+  margin-right: 6rem;
+  margin-bottom: 2rem;
+}
+
+.bam-dash-policy-toggle-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1rem solid rgba(255, 255, 255, 0.12);
+  color: #81d4fa;
+  font-size: 8.5rem;
+  padding: 2rem 6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+.bam-dash-policy-toggle-btn:hover {
+  background: rgba(129, 212, 250, 0.15);
+  border-color: #81d4fa;
+  color: #ffffff;
+}
+
+.bam-dash-policy-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.bam-dash-policy-tile {
+  position: relative;
+  width: 36rem;
+  height: 36rem;
+  border-radius: 6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1rem solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 6rem;
+  margin-bottom: 6rem;
+  transition: all 0.12s ease;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bam-dash-policy-tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1rem);
+}
+
+.bam-dash-policy-tile.active {
+  background: rgba(102, 187, 106, 0.18);
+  border: 1.5rem solid #66bb6a;
+  box-shadow: 0 0 6rem rgba(102, 187, 106, 0.3);
+}
+
+.bam-dash-policy-tile.conflict,
+.bam-dash-policy-tile.disabled {
+  opacity: 0.35;
+  border-color: #ef5350;
+  cursor: not-allowed;
+}
+
+.bam-dash-policy-tile.slider-selected {
+  border-color: #4fc3f7;
+  box-shadow: 0 0 8rem rgba(79, 195, 247, 0.45);
+}
+
+.bam-dash-policy-img {
+  width: 26rem;
+  height: 26rem;
+  border-radius: 3rem;
+  pointer-events: none;
+}
+
+.bam-dash-policy-initials {
+  font-size: 11rem;
+  font-weight: 800;
+  color: #b0bec5;
+  pointer-events: none;
+}
+
+.bam-dash-policy-slider-badge {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  width: 12rem;
+  height: 12rem;
+  background: rgba(14, 22, 32, 0.95);
+  border: 1rem solid #4fc3f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.bam-dash-policy-slider-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1rem solid rgba(79, 195, 247, 0.35);
+  border-radius: 4rem;
+  padding: 6rem 8rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  box-sizing: border-box;
+}
+
+.bam-dash-slider-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9.5rem;
+  font-weight: 700;
+  color: #4fc3f7;
+  margin-bottom: 4rem;
+}
+
+.bam-dash-slider-close {
+  background: rgba(79, 195, 247, 0.16);
+  border: 1rem solid rgba(79, 195, 247, 0.45);
+  border-radius: 3rem;
+  color: #b3e5fc;
+  font-size: 9rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1.5rem 7rem;
+  transition: all 0.12s ease;
+}
+
+.bam-dash-slider-close:hover {
+  background: rgba(79, 195, 247, 0.35);
+  border-color: #4fc3f7;
+  color: #ffffff;
+}
+
+.bam-dash-empty-policies {
+  font-size: 9rem;
+  color: #78909c;
+  font-style: italic;
+  padding: 6rem 0;
+}
+
+/* Citizen Happiness Factors Card */
+.bam-happy-controls-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+  padding-bottom: 4rem;
+  border-bottom: 1rem solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.bam-happy-btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 4rem;
+  margin-bottom: 3rem;
+}
+
+.bam-happy-btn-group:last-child {
+  margin-right: 0;
+}
+
+.bam-happy-group-label {
+  font-size: 8.5rem;
+  font-weight: 700;
+  color: #90a4ae;
+  margin-right: 4rem;
+  text-transform: uppercase;
+}
+
+.bam-happy-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1rem solid rgba(255, 255, 255, 0.12);
+  color: #b0bec5;
+  border-radius: 3rem;
+  font-size: 8.5rem;
+  font-weight: 700;
+  padding: 2rem 5rem;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bam-happy-toggle-btn:last-child {
+  margin-right: 0;
+}
+
+.bam-happy-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.bam-happy-toggle-btn.active {
+  background: rgba(79, 195, 247, 0.25);
+  border-color: #4fc3f7;
+  color: #ffffff;
+}
+
+.bam-happy-toggle-btn.pos.active {
+  background: rgba(102, 187, 106, 0.25);
+  border-color: #66bb6a;
+  color: #81c784;
+}
+
+.bam-happy-toggle-btn.neg.active {
+  background: rgba(239, 83, 80, 0.25);
+  border-color: #ef5350;
+  color: #ef5350;
+}
+
+.bam-happy-factors-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.bam-happy-factor-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 4rem 2.5rem 0;
+  font-size: 9.5rem;
+  border-bottom: 1rem solid rgba(255, 255, 255, 0.04);
+}
+
+.bam-happy-factor-row:last-child {
+  border-bottom: none;
+}
+
+.bam-happy-factor-name {
+  flex: 1;
+  min-width: 0;
+  color: #cfd8dc;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 6rem;
+}
+
+.bam-happy-factor-weight {
+  font-weight: 800;
+  font-size: 10rem;
+  letter-spacing: 0.2rem;
+  flex-shrink: 0;
+}
+
+.bam-happy-factor-weight.pos {
+  color: #66bb6a;
+}
+
+.bam-happy-factor-weight.neg {
+  color: #ef5350;
+}
+
+.bam-happy-factor-weight.neutral {
+  color: #90a4ae;
+}
+
+.bam-happy-empty {
+  font-size: 9rem;
+  color: #78909c;
+  font-style: italic;
+  padding: 6rem 0;
+}
+
+.bam-happy-desc {
+  font-size: 8rem;
+  line-height: 1.25;
+  color: #78909c;
+  font-style: italic;
+  padding-top: 4rem;
+  border-top: 1rem solid rgba(255, 255, 255, 0.06);
+}

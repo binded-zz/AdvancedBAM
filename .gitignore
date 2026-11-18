@@ -1,0 +1,45 @@
+# Build outputs & Unity/CS2 temp dirs
+bin/
+obj/
+Library/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+.idea/
+*.pdb
+*.dll
+*.exe
+*.nupkg
+*.zip
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+AdvancedBAM/node_modules/
+AdvancedBAM/dist/
+AdvancedBAM/build/
+package-lock.json
+*.tsbuildinfo
+
+# Local AI workspace, agent notes, audits & scratch files
+.agent/
+.agents/
+.gemini/
+scratch/
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# OS artifacts
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,9 @@
+{
+  "name": "advanced-bam-root",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix AdvancedBAM run build",
+    "dev": "npm --prefix AdvancedBAM run dev",
+    "build:all": "dotnet build ./AdvancedBAM.csproj"
+  }
+}

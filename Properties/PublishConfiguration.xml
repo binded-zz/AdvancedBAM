@@ -1,0 +1,73 @@
+<Publish>
+	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
+	<ModId Value="167082" />
+	<!--Name of the mod to display to players-->
+	<DisplayName Value="Advanced Building &amp; Asset Manager" />
+	<!--Short description of the mod-->
+	<ShortDescription Value="Real-time ECS building &amp; asset explorer, 12-card inspector, district analytics, policy controls, 9,400+ prefab plopper, and 1-click city repairs." />
+	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
+	<LongDescription>
+# Advanced Building &amp; Asset Manager (BAM)
+
+**Advanced Building &amp; Asset Manager (BAM)** gives city builders complete real-time visibility and control over every placed building, company, municipal service facility, sub-building upgrade, district, and catalog prefab in **Cities: Skylines II**.
+
+Open BAM anytime using the top-left **BAM** toolbar button or the **BAM** quick-inspect button on any vanilla Building or District info panel.
+
+## Key Features
+
+### 1. 10-Tab Building &amp; Catalog Explorer
+- **Dedicated Category Views**: Tailored tables, summary strips, and **Zone Matrices** (Residential, Commercial, Office, Industrial, Storage, Services &amp; Signature) for **All Buildings**, **Districts**, **Residential**, **Commercial**, **Industrial**, **Office**, **Storage**, **Civic Services**, **Signature Landmarks**, and **Catalog Prefabs**.
+- **Customizable &amp; Reorderable Columns**: Resize, show/hide, and reorder table columns independently per category tab, with synchronized horizontal scrolling and double-click width reset.
+- **Quick Presets &amp; Favorites**: 1-click triage pills for **Favorites**, **Damaged**, **Turned Off**, **Needs Repair**, **Abandoned**, **Losing Money**, **At Capacity**, **High Wealth**, and **Mixed-Use**, plus building and prefab starring.
+- **Free-Floating Draggable Filters Flyout**: Filter by **Lot Width x Depth**, **Corner Type** (Straight, Left, Right), **Building Level** (L1-L5), **Zone Type &amp; Density**, **Parking**, **Resources**, **Transit Hubs**, **Service Category**, **Theme**, and **Creator Pack / DLC**, with interactive **Active Filter Chips**.
+
+### 2. 12-Card Draggable Building Inspector &amp; Sub-Building Upgrades
+Expand any building or catalog row to inspect 12 reorderable, collapsible detail cards:
+- **Identity, Specs &amp; Supply Chain**: Entity ID, street address, prefab name, district, theme/DLC badge, construction cost, lot footprint, land value, foot traffic, input/output goods, and warehouse storage utilization.
+- **Performance, Economics &amp; Services**: Workforce by education tier, efficiency, utilities, crime risk, monthly maintenance, company profitability, tax rate, household wealth tier, income, rent, upkeep, utility fees, school enrollment, parking occupancy, and park attractiveness.
+- **Efficiency &amp; Citizen Happiness**: Live breakdown of building efficiency modifiers and all 26 household/worker happiness factors.
+- **Sub-Building Upgrades &amp; Radius Effects**: Inspect attached service extensions with 1-click camera focus, toggle on/off, repair, or demolish, plus active city-wide modifiers and local radius auras.
+
+### 3. Interactive District &amp; City-Wide Analytics Dashboard
+- **Game-Authoritative City Snapshot**: Live ECS rollup of **All Citizens**, **Moved-In Residents**, **Employed Workers**, **Students**, **Tourists**, **Commuters**, **Moving Away**, and **Homeless**.
+- **9 Draggable Dashboard Cards**: **Citizen Happiness Factors**, **Demographics** (Age Groups &amp; Resident Education mini-bars, Residents, Students, Tourists, Homeless), **Workforce &amp; Jobs** (Worker Education vs Workplace Capacity, Open Positions, Unemployment), **Housing &amp; Zoning** (Zone breakdown, Households/Cap, Wealth tier, Income, Rent, Upkeep, Resource Cost, Service Fees, Pets, Commercial Sales), **Schools &amp; Education** (Elementary, High School, College, University Enrolled vs Capacity &amp; Eligibility), **Utilities &amp; Services**, **Land, Health &amp; Safety** (Area, Land Value, Attractiveness, Sick Citizens, Crime, Pollution), **City &amp; District Policies**, and **Policy Plus**.
+- **Ordinance &amp; Policy Plus Controls**: Toggle native ordinances and **Policy Plus** policies with sliders, conflict prevention, **Apply to All Districts**, and **Copy Policies**.
+
+### 4. City Tools, Emergency Repairs, Plopping &amp; Vanilla Integration
+- **1-Click Emergency Repairs**: Restore individual buildings or run city-wide ECS recovery actions (**Repair All Buildings**, **Extinguish Fires** including extractors, **Drain Floods**, **Storm Recovery**, **Clear Accidents** including roads &amp; vehicles, **Rebuild Collapsed**, **Reclaim Abandoned**, and **Fix Broken Paths** via automated in-place Move/Relocate for buildings with broken road or pedestrian access).
+- **Direct Prefab Plopping &amp; Cloning**: Plop any standalone catalog building prefab or clone existing placed buildings with 1 click.
+- **Vanilla SIP, Scene Explorer, Persistent Settings &amp; 11 Languages**: Native **BAM** quick-inspect button on Building &amp; District info panels, **Scene Explorer** entity ID click inspection, file-backed UI settings persistence (`ModsSettings/AdvancedBAM/ui-settings.json`), Docked Maximize, CSV Data Export, and 11-language localization (EN, DE, ES, FR, IT, JA, KO, PL, PT-BR, RU, ZH-HANS).
+	</LongDescription>
+	<!--Thumbnail-->
+	<Thumbnail Value="Properties/Thumbnails/Thumbnail.png" />
+	<!--Screenshot, can be set multiple times-->
+	<Screenshot Value="Properties/Thumbnails/01_Explorer_Overview.png" />
+	<Screenshot Value="Properties/Thumbnails/02_Zone_Matrices.png" />
+	<Screenshot Value="Properties/Thumbnails/03_Districts_Dashboard.png" />
+	<Screenshot Value="Properties/Thumbnails/04_Policy_Controls.png" />
+	<Screenshot Value="Properties/Thumbnails/05_Commercial_Inspector.png" />
+	<Screenshot Value="Properties/Thumbnails/06_Residential_Inspector.png" />
+	<Screenshot Value="Properties/Thumbnails/07_Services_And_Repairs.png" />
+	<Screenshot Value="Properties/Thumbnails/08_Catalog_Plopper.png" />
+	<Screenshot Value="Properties/Thumbnails/09_Filters_Flyout.png" />
+	<Screenshot Value="Properties/Thumbnails/10_Settings_Preferences.png" />
+	<!--Tag, can be set multiple times-->
+	<Tag Value="Code Mod" />
+	<!--Link to the forum post where the mod can be discussed-->
+	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/advanced-bam.1949486/" />
+	<!--Version of the mod-->
+	<ModVersion Value="1.0.2" />
+	<!--Recommended version of the base game to use the mod-->
+	<GameVersion Value="1.6.*" />
+	<!--Dependency for the mod, can be set multiple times-->
+	<Dependency Id="74417" />
+	<Dependency Id="79634" />
+	<!--Required DLC, can be set multiple times-->
+	<RequiredDLC Value="" />
+	<!--Change log for new version-->
+	<ChangeLog Value="Update v1.0.2: Added automated in-place Move/Relocate path repair for buildings with broken pedestrian/road access (single-row Path button, Broken Path status badge, Fix Path inspector button, and Fix Broken Paths / Repair All bulk tools, including upgraded service buildings); exact vanilla city/district population, homeless &amp; sub-building worker parity; fixed background catalog warmup timing for Asset Icon Library thumbnails &amp; Filters Flyout pack list; added inline asset renaming in expanded Identity &amp; Location; added Storage Totals column on Storage, Service Fleet column after Usage on Services, City-Wide &amp; Unassigned rows in Zone Matrices + Explorer filter, Damaged % badges across all tabs, name-only search, Quick Presets hide button, ghost-free Favorites tracking, and full Burst AOT release packaging." />
+	<!--External link-->
+	<ExternalLink Type="github" Url="https://github.com/binded/AdvancedBAM" />
+	<!--Supported values Public, Private, Unlisted-->
+	<AccessLevel Value="Public" />
+</Publish>
